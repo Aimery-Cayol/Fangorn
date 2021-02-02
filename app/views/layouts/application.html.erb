@@ -11,6 +11,17 @@
   </head>
 
   <body>
+          <!--PERSONAL SCRIPT JavaScript-->
+        <script type="text/javascript">
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+        });
+
+        </script>
+
     <%= yield %>
     <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert alert-info" %>
