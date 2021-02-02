@@ -37,6 +37,16 @@
 
     <body id="page-top">
 
+        <!--PERSONAL SCRIPT JavaScript-->
+        <script type="text/javascript">
+            $(function () {
+                $(document).scroll(function () {
+                    var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+        });
+
+        </script>
 
 
         <!-- Navigation-->
@@ -57,16 +67,6 @@
             </div>
         </nav>
 
-        <!--PERSONAL SCRIPT JavaScript-->
-        <script type="text/javascript">
-            $(function () {
-                $(document).scroll(function () {
-                    var $nav = $(".navbar-fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        });
-        });
-
-        </script>
 
         <!-- Masthead-->
         <header class="masthead">
