@@ -1,4 +1,5 @@
 class BlagsController < ApplicationController
+  
   def index
   end
 
