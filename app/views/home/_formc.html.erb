@@ -1,7 +1,16 @@
 
-
-
 <%= form_with(model: contact, local: true) do |form|%>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="mb-6">
     <%= form.text_field :email, class: "form-control h-62", placeholder: "Entrez votre adresse mail..." %>
@@ -13,5 +22,3 @@
 <% end %>
 
                             
-
-
