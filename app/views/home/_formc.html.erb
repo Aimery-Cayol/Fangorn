@@ -1,0 +1,17 @@
+
+
+
+<%= form_with(model: contact, local: true) do |form|%>
+
+  <div class="mb-6">
+    <%= form.text_field :email, class: "form-control h-62", placeholder: "Entrez votre adresse mail..." %>
+  </div>
+<br>
+  <div class="actions">
+    <button class="btn btn-primary mx-auto" type="submit">S'inscrire</button>
+  </div>
+<% end %>
+
+                            
+
+
